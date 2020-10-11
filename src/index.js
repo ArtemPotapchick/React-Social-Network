@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import state from "./Redux/State";
+
 
 ReactDOM.render(
+
+
   <React.StrictMode>
-    <App />
+    <App state={state} dialogsData={state} messagesData={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );
