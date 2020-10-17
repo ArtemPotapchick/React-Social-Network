@@ -23,6 +23,23 @@ let state = {
             {id: 5, name: 'Vitaly'},
         ],
 
-    }
+    },
+    sideBar:[
+        {photo:require("./../img/boy.svg")},
+        {photo:require("./../img/man.svg")},
+        {photo:require("./../img/guy.svg")},
+    ]
+
+}
+
+export let addPost = (postMessage) =>{
+    debugger;
+    let newPost = {
+        id:3,
+        message:postMessage,
+        likesCount: 0
+
+    };
+    state.profilePage.postsData.push(newPost)
 }
 export default state;

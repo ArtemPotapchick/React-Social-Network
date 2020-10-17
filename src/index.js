@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import state from "./Redux/State";
+import state, {addPost} from "./Redux/State";
 
-
+addPost("SAMURAI");
 ReactDOM.render(
 
 
   <React.StrictMode>
-    <App state={state} dialogsData={state} messagesData={state} />
+    <App state={state} dialogsData={state} messagesData={state} addPost={addPost} />
   </React.StrictMode>,
   document.getElementById('root')
 );
